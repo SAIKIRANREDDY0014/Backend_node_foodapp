@@ -17,7 +17,7 @@ server.use('/product',productrouter);
 
 server.use('/uploads',express.static('uploads'))
 server.listen(process.env.PORT || 4040,()=>{
-  console.log(`server listens at ${PORT}`)
+  console.log(`server listens at ${process.env.PORT}`)
 });
 
 server.use('/',(req,res)=>{
