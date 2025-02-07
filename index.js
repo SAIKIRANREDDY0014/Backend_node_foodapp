@@ -16,12 +16,11 @@ server.use('/firm',firmroutes)
 server.use('/product',productrouter);
 
 server.use('/uploads',express.static('uploads'))
-const PORT = 4040;
-server.listen(PORT,()=>{
+server.listen(process.env.PORT || 4040,()=>{
   console.log(`server listens at ${PORT}`)
 });
 
-server.use('/body',(req,res)=>{
+server.use('/',(req,res)=>{
   res.send("<h1>food delivery App</h1>");
 })
 
